@@ -13,7 +13,7 @@ export default function App() {
     setError('');
     setShortUrl('');
     try {
-      const res = await fetch('http://localhost:8000/api/shorten', {
+      const res = await fetch('https://snapurl-f71p.onrender.com/api/shorten', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ originalUrl: url })

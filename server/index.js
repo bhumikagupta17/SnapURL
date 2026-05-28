@@ -6,12 +6,8 @@ import urlRoutes from './routes/url.js';
 import Url from './models/Url.js';
 
 dotenv.config();
-
-const app = express();
 app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
+  origin: '*'
 }));
 app.use(express.json());
 

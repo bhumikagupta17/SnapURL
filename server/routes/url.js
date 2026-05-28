@@ -10,7 +10,7 @@ router.post('/shorten', async (req, res) => {
     const shortCode = 'snap-' + nanoid(5);
     const url = new Url({ originalUrl, shortCode });
     await url.save();
-    res.json({ shortCode, shortUrl: `http://localhost:8000/${shortCode}` });
+    res.json({ shortCode, shortUrl: `https://snapurl-f71p.onrender.com/${shortCode}` });
   } catch (err) {
     res.status(500).json({ error: 'Server error' });
   }
