@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: '*'
+  origin: 'https://snap-url-iota.vercel.app/'
 }));
 app.use(express.json());
 
