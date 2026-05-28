@@ -7,7 +7,7 @@ router.post('/shorten', async (req, res) => {
   const { originalUrl } = req.body;
 
   try {
-    const shortCode = 'snap-' + nanoid(5);
+    const shortCode = nanoid(5);
     const url = new Url({ originalUrl, shortCode });
     await url.save();
     res.json({ shortCode, shortUrl: `https://snapurl-f71p.onrender.com/${shortCode}` });
