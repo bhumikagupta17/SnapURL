@@ -7,10 +7,10 @@ router.post('/shorten', async (req, res) => {
   const { originalUrl } = req.body;
 
   try {
-    const shortCode = nanoid(6);
+    const shortCode = 'snap-' + nanoid(5);
     const url = new Url({ originalUrl, shortCode });
     await url.save();
-    res.json({ shortCode, shortUrl: `http://localhost:5000/${shortCode}` });
+    res.json({ shortCode, shortUrl: `http://localhost:8000/${shortCode}` });
   } catch (err) {
     res.status(500).json({ error: 'Server error' });
   }
